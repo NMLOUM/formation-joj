@@ -1,0 +1,79 @@
+[
+  {
+    "id": "0199f5c2-1000-7000-8000-000000000001",
+    "name": "Île de Gorée",
+    "latitude": 14.667,
+    "longitude": -17.398,
+    "visit_minutes": 180
+  },
+  {
+    "id": "0199f5c2-1000-7000-8000-000000000002",
+    "name": "Monument de la Renaissance africaine",
+    "latitude": 14.722,
+    "longitude": -17.495,
+    "visit_minutes": 60
+  },
+  {
+    "id": "0199f5c2-1000-7000-8000-000000000003",
+    "name": "Musée des civilisations noires",
+    "latitude": 14.668,
+    "longitude": -17.432,
+    "visit_minutes": 90
+  },
+  {
+    "id": "0199f5c2-1000-7000-8000-000000000004",
+    "name": "Marché Sandaga",
+    "latitude": 14.672,
+    "longitude": -17.434,
+    "visit_minutes": 60
+  },
+  {
+    "id": "0199f5c2-1000-7000-8000-000000000005",
+    "name": "Plage de Ngor",
+    "latitude": 14.753,
+    "longitude": -17.513,
+    "visit_minutes": 90
+  },
+  {
+    "id": "0199f5c2-1000-7000-8000-000000000006",
+    "name": "Village artisanal de Soumbédioune",
+    "latitude": 14.683,
+    "longitude": -17.464,
+    "visit_minutes": 45
+  },
+  {
+    "id": "0199f5c2-1000-7000-8000-000000000007",
+    "name": "Lac Rose",
+    "latitude": 14.838,
+    "longitude": -17.234,
+    "visit_minutes": 90
+  },
+  {
+    "id": "0199f5c2-1000-7000-8000-000000000008",
+    "name": "Marché de Diamniadio",
+    "latitude": 14.724,
+    "longitude": -17.191,
+    "visit_minutes": 30
+  },
+  {
+    "id": "0199f5c2-1000-7000-8000-000000000009",
+    "name": "Marché de Rufisque",
+    "latitude": 14.716,
+    "longitude": -17.273,
+    "visit_minutes": 45
+  },
+  {
+    "id": "0199f5c2-1000-7000-8000-000000000010",
+    "name": "Réserve de Bandia",
+    "latitude": 14.583,
+    "longitude": -17.009,
+    "visit_minutes": 120
+  },
+  {
+    "id": "0199f5c2-1000-7000-8000-000000000011",
+    "name": "Plage de Saly",
+    "latitude": 14.444,
+    "longitude": -17.018,
+    "visit_minutes": 60
+  }
+]
