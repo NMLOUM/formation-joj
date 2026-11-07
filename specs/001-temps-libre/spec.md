@@ -1,6 +1,6 @@
 # 001 — Que faire avec mon temps libre
 
-**Statut** : Validée
+**Statut** : Implémentée
 **PRD** : specs/prd-guide-dakar.md, TR1
 
 ## Contexte
