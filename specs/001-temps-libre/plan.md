@@ -102,7 +102,7 @@ Chaque scénario de la spec est prouvé par au moins un test, au niveau le plus 
 Six tâches, dans l'ordre des couches ; chacune tient dans un commit.
 
 - [x] T01 [001-AS4] Écrire d'abord `packages/shared/src/places.spec.ts` (« 001-AS4: rejects a free time other than 1, 2 or 3 hours »), puis `packages/shared/src/places.ts` et son export dans `index.ts`
-- [ ] T02 [001-AS1, AS2] Écrire d'abord `domain/visit-plan.spec.ts` (« 001-AS1: sorts places from nearest to farthest », « 001-AS2: moves a place that does not fit the free time to the bottom »), puis `site.ts`, `place.ts`, `visit-plan.ts` et `places.errors.ts`
+- [x] T02 [001-AS1, AS2] Écrire d'abord `domain/visit-plan.spec.ts` (« 001-AS1: sorts places from nearest to farthest », « 001-AS2: moves a place that does not fit the free time to the bottom »), puis `site.ts`, `place.ts`, `visit-plan.ts` et `places.errors.ts`
 - [ ] T03 [001-AS3] Écrire d'abord `application/places.application.spec.ts` (« 001-AS3: rejects an unknown site »), puis les ports, les repositories en mémoire, `ListSites` et `SuggestPlaces`
 - [ ] T04 [001-AS1] Écrire d'abord `infra/drizzle-places.repository.int.spec.ts` (« 001-AS1: reads the sites and places of the prepared list »), puis `places.schema.ts`, la migration générée, les mappers, les repositories Drizzle et les fichiers `apps/api/data/*.json`
 - [ ] T05 [001-AS1, AS2, AS3, AS4] Écrire d'abord `apps/api/test/places.e2e.spec.ts` (un test par scénario, « 001-AS1: lists places by distance (200) » … « 001-AS4: … »), puis `places.controller.ts`, `places.module.ts` et l'ajout à `app.module.ts`
