@@ -1,7 +1,8 @@
-import type { ProblemDetails } from '@joj/shared';
-import { delay, HttpResponse, type RequestHandler } from 'msw';
+import { type ProblemDetails, suggestPlacesQuerySchema } from '@joj/shared';
+import { delay, http, HttpResponse, type RequestHandler } from 'msw';
 import type { z } from 'zod';
 import { mockControl } from './control';
+import { fixture, suggestionKey } from './fixture';
 
 /**
  * La fausse API des tests du front : le même contrat que apps/api (mêmes schémas zod, mêmes
@@ -48,4 +49,28 @@ export function validationFailed(error: z.ZodError) {
   });
 }
 
-export const handlers: RequestHandler[] = [];
+const siteNotFound = (id: string) =>
+  problem(404, 'SITE_NOT_FOUND', `No site with id ${id}`, { details: { id } });
+
+export const handlers: RequestHandler[] = [
+  http.get('*/api/sites', async () => {
+    const failure = await gate('GET', '/api/sites');
+    if (failure) return failure;
+    return HttpResponse.json([...fixture.sites].sort((x, y) => x.name.localeCompare(y.name)));
+  }),
+
+  http.get('*/api/sites/:siteId/places', async ({ params, request }) => {
+    const failure = await gate('GET', '/api/sites/:siteId/places');
+    if (failure) return failure;
+    // Même ordre de contrôle que l'API : la query d'abord (DTO), puis le site (cas d'usage).
+    const query = suggestPlacesQuerySchema.safeParse(
+      Object.fromEntries(new URL(request.url).searchParams),
+    );
+    if (!query.success) return validationFailed(query.error);
+    const siteId = String(params['siteId']);
+    if (!fixture.sites.some((site) => site.id === siteId)) return siteNotFound(siteId);
+    return HttpResponse.json(
+      fixture.suggestions.get(suggestionKey(siteId, query.data.freeHours)) ?? [],
+    );
+  }),
+];
