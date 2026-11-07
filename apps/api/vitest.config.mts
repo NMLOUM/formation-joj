@@ -25,5 +25,8 @@ export default defineConfig({
     // Démarrer PGlite (WebAssembly) prend un peu de temps sur une machine modeste.
     hookTimeout: 30_000,
     testTimeout: 15_000,
+    // Plusieurs instances PGlite démarrées en parallèle font planter les workers sous Windows
+    // (code 0x80000003) : on lance les fichiers de l'API l'un après l'autre.
+    fileParallelism: false,
   },
 });
