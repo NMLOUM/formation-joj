@@ -11,7 +11,9 @@ async function choose(site: string, freeTime: string) {
   const user = userEvent.setup();
   await renderRoute({ initialEntries: ['/'] });
   await screen.findByText('Choisissez votre site d’épreuve.');
-  await user.selectOptions(await screen.findByLabelText('Site d’épreuve'), site);
+  // La liste des sites arrive de l'API : on attend l'option avant de la choisir.
+  await screen.findByRole('option', { name: site });
+  await user.selectOptions(screen.getByLabelText('Site d’épreuve'), site);
   await user.click(screen.getByRole('button', { name: freeTime }));
   const list = await screen.findByRole('list', { name: 'Lieux' });
   return within(list).getAllByRole('listitem');

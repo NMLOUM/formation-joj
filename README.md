@@ -1,5 +1,9 @@
 # JOJ Dakar 2026 : point de départ de l'atelier C
 
+- **Le problème et pour qui :** un visiteur qui découvre Dakar a quelques heures libres entre deux épreuves ; Dakar Escale lui montre, depuis son site d'épreuve (Dakar, Diamniadio, Saly) et pour 1, 2 ou 3 h, les lieux les plus proches, et met en bas ceux qu'il n'a pas le temps de visiter (PRD : [`specs/prd-guide-dakar.md`](specs/prd-guide-dakar.md)).
+- **Lancer :** `pnpm install`, `pnpm db:seed` (charge les sites et les lieux de `apps/api/data/`), puis `pnpm dev`.
+- **Ce qui manque :** filtre par catégorie (TR2), fiche d'un lieu et bouton « Y aller » (TR3) ; coordonnées et durées de visite approximatives ; temps de trajet estimé à 20 km/h à vol d'oiseau.
+
 Un monorepo pnpm : une API NestJS, un front React et des schémas partagés. Le socle technique est prêt (configuration, base, erreurs, client HTTP, fausse API des tests) ; aucun module métier n'est écrit. Le module de référence, qui montre toute la chaîne du schéma partagé à l'écran, se lit sur la branche `main` (voir `CLAUDE.md`).
 
 L'énoncé de l'atelier C est dans [`task/ATELIER-C.md`](task/ATELIER-C.md).
