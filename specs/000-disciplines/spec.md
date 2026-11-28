@@ -36,6 +36,7 @@ Le module d'exemple du dépôt, écrit avant les ateliers : il n'a pas de PRD. L
 ### AS6 — Consulter une discipline
 
 - **Étant donné** une discipline · **Quand** le membre ouvre sa fiche · **Alors** il voit son nom, sa catégorie et sa date de création.
+- **Étant donné** « Lutte », « Taekwondo » et « Judo » en sports de combat, « Natation » en sports nautiques · **Quand** le membre demande les disciplines similaires à « Lutte » · **Alors** il voit « Judo » puis « Taekwondo », sans « Lutte » ni « Natation » ; seule de sa catégorie, la liste est vide.
 
 ### AS7 — Renommer ou changer de catégorie
 
@@ -55,7 +56,7 @@ Le module d'exemple du dépôt, écrit avant les ateliers : il n'a pas de PRD. L
 
 ### AS11 — Discipline introuvable
 
-- **Étant donné** une discipline qui n'existe pas, ou supprimée entre-temps par quelqu'un d'autre · **Quand** le membre l'ouvre, la modifie ou la supprime · **Alors** l'application dit qu'elle est introuvable.
+- **Étant donné** une discipline qui n'existe pas, ou supprimée entre-temps par quelqu'un d'autre · **Quand** le membre l'ouvre, la modifie, la supprime ou demande ses similaires · **Alors** l'application dit qu'elle est introuvable.
 
 ## Hors périmètre
 
